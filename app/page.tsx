@@ -80,7 +80,7 @@ function BrandLogo({ full = false }: { full?: boolean }) {
   return (
     <img
       className="brand-logo"
-      src={full ? "/images/brand-concept02-full.png" : "/images/brand-concept02-nav.png"}
+      src={full ? "/images/brand-original-trial-full.png" : "/images/brand-original-trial-nav.png"}
       alt="BroadMind Decision"
     />
   );
