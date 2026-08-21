@@ -41,6 +41,21 @@ const process = [
   ["04", "Decidir", "Convertimos el análisis en una decisión accionable y medible."],
 ];
 
+function BrandLogo() {
+  return (
+    <>
+      <span className="logo-mark" aria-hidden="true">
+        <span className="logo-d-stem" />
+        <img src="/images/brand-neural-core.png" alt="" />
+      </span>
+      <span className="logo-copy">
+        <span className="logo-name"><strong>BroadMind</strong><em>Decision</em></span>
+        <span className="logo-signature">Neuro-strategic advisory</span>
+      </span>
+    </>
+  );
+}
+
 function NeuralCanvas() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -229,7 +244,7 @@ export default function Home() {
     <main>
       <header className="site-header">
         <a className="brand" href="#inicio" aria-label="BroadMind Decision, volver al inicio">
-          <img src="/images/brand-wordmark.png" alt="BroadMind Decision" />
+          <BrandLogo />
         </a>
         <button
           className="menu-toggle"
@@ -403,7 +418,7 @@ export default function Home() {
 
       <footer className="site-footer">
         <div className="shell footer-main">
-          <a className="brand footer-brand" href="#inicio"><img src="/images/brand-wordmark.png" alt="BroadMind Decision" /></a>
+          <a className="brand footer-brand" href="#inicio" aria-label="BroadMind Decision, volver al inicio"><BrandLogo /></a>
           <p>Executive Coaching &amp;<br />Strategic Consulting</p>
           <div className="footer-nav">
             {navItems.map(([label, href]) => <a href={href} key={href}>{label}</a>)}

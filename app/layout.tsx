@@ -34,7 +34,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description: "La ciencia de decidir. La claridad de liderar.",
       type: "website",
       locale: "es_ES",
-      images: [{ url: `${origin}/og.png`, width: 1536, height: 910, alt: "BroadMind Decision — La ciencia de decidir" }],
+      images: [{ url: `${origin}/og.png`, width: 1200, height: 630, alt: "BroadMind Decision — La ciencia de decidir" }],
     },
     twitter: {
       card: "summary_large_image",
