@@ -41,18 +41,13 @@ const process = [
   ["04", "Decidir", "Convertimos el análisis en una decisión accionable y medible."],
 ];
 
-function BrandLogo() {
+function BrandLogo({ full = false }: { full?: boolean }) {
   return (
-    <>
-      <span className="logo-mark" aria-hidden="true">
-        <span className="logo-d-stem" />
-        <img src="/images/brand-neural-core.png" alt="" />
-      </span>
-      <span className="logo-copy">
-        <span className="logo-name"><strong>BroadMind</strong><em>Decision</em></span>
-        <span className="logo-signature">Neuro-strategic advisory</span>
-      </span>
-    </>
+    <img
+      className="brand-logo"
+      src={full ? "/images/brand-concept02-full.png" : "/images/brand-concept02-nav.png"}
+      alt="BroadMind Decision"
+    />
   );
 }
 
@@ -418,7 +413,7 @@ export default function Home() {
 
       <footer className="site-footer">
         <div className="shell footer-main">
-          <a className="brand footer-brand" href="#inicio" aria-label="BroadMind Decision, volver al inicio"><BrandLogo /></a>
+          <a className="brand footer-brand" href="#inicio" aria-label="BroadMind Decision, volver al inicio"><BrandLogo full /></a>
           <p>Executive Coaching &amp;<br />Strategic Consulting</p>
           <div className="footer-nav">
             {navItems.map(([label, href]) => <a href={href} key={href}>{label}</a>)}
