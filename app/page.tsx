@@ -9,6 +9,41 @@ const navItems = [
   ["Contacto", "#contacto"],
 ];
 
+const heroSlides = [
+  {
+    image: "/images/hero-brain.webp",
+    eyebrow: "Neurociencia aplicada al liderazgo",
+    title: "La ciencia de decidir.",
+    accent: "La claridad de liderar.",
+    copy: "Acompañamos a CEOs y altos directivos a transformar complejidad en decisiones claras, estratégicas y sostenibles.",
+    cta: "Agenda una conversación",
+  },
+  {
+    image: "/images/hero-decision-cost.webp",
+    eyebrow: "El costo invisible de esperar",
+    title: "La indecisión tiene un costo.",
+    accent: "Hazlo visible.",
+    copy: "Cada demora consume foco, energía y oportunidad. Convierte lo invisible en un criterio claro para actuar.",
+    cta: "Descubre qué está en juego",
+  },
+  {
+    image: "/images/hero-foresight.webp",
+    eyebrow: "Anticipación ejecutiva",
+    title: "El mercado no espera.",
+    accent: "Anticípate.",
+    copy: "Entrena la mirada que reconoce patrones antes de que se conviertan en presión para el negocio.",
+    cta: "Convierte presión en criterio",
+  },
+  {
+    image: "/images/hero-direction.webp",
+    eyebrow: "Dirección antes que velocidad",
+    title: "Tu próxima ventaja",
+    accent: "empieza aquí.",
+    copy: "Una conversación estratégica puede convertir incertidumbre en el siguiente movimiento que tu organización necesita.",
+    cta: "Agenda tu sesión estratégica",
+  },
+];
+
 const services = [
   {
     number: "01",
@@ -234,6 +269,21 @@ function ContactForm() {
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeSlide, setActiveSlide] = useState(0);
+  const [sliderPaused, setSliderPaused] = useState(false);
+  const slide = heroSlides[activeSlide];
+
+  useEffect(() => {
+    if (sliderPaused || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const timer = window.setInterval(() => {
+      setActiveSlide((current) => (current + 1) % heroSlides.length);
+    }, 8000);
+    return () => window.clearInterval(timer);
+  }, [sliderPaused]);
+
+  const moveSlide = (direction: number) => {
+    setActiveSlide((current) => (current + direction + heroSlides.length) % heroSlides.length);
+  };
 
   return (
     <main>
@@ -264,16 +314,22 @@ export default function Home() {
       </header>
 
       <section className="hero" id="inicio">
-        <div className="hero-image" aria-hidden="true" />
+        <div className="hero-slides" aria-hidden="true">
+          {heroSlides.map((item, index) => (
+            <div className={index === activeSlide ? "hero-slide is-active" : "hero-slide"} key={item.image}>
+              <img src={item.image} alt="" />
+            </div>
+          ))}
+        </div>
         <NeuralCanvas />
         <div className="hero-shade" aria-hidden="true" />
-        <div className="hero-content shell">
-          <p className="eyebrow light"><span /> Neurociencia aplicada al liderazgo</p>
-          <h1>La ciencia de decidir.<br /><em>La claridad de liderar.</em></h1>
-          <p className="hero-copy">Acompañamos a CEOs y altos directivos a transformar complejidad en decisiones claras, estratégicas y sostenibles.</p>
+        <div className="hero-content shell" key={activeSlide}>
+          <p className="eyebrow light"><span /> {slide.eyebrow}</p>
+          <h1>{slide.title}<br /><em>{slide.accent}</em></h1>
+          <p className="hero-copy">{slide.copy}</p>
           <div className="hero-actions">
-            <a className="button button-gold" href="#contacto">Agenda una conversación <span aria-hidden="true">↗</span></a>
-            <a className="text-link" href="#metodologia">Descubre nuestro enfoque <span aria-hidden="true">↓</span></a>
+            <a className="button button-gold" href="#contacto">{slide.cta} <span aria-hidden="true">↗</span></a>
+            <a className="text-link" href="#metodologia">Conoce nuestro método <span aria-hidden="true">↓</span></a>
           </div>
           <div className="hero-trust">
             <span>Confidencialidad ejecutiva</span>
@@ -281,7 +337,34 @@ export default function Home() {
             <span>Acompañamiento 1:1</span>
           </div>
         </div>
-        <div className="hero-index" aria-hidden="true">BMD / 01</div>
+        <div
+          className="slider-controls"
+          onMouseEnter={() => setSliderPaused(true)}
+          onMouseLeave={() => setSliderPaused(false)}
+          onFocus={() => setSliderPaused(true)}
+          onBlur={(event) => {
+            if (!event.currentTarget.contains(event.relatedTarget)) setSliderPaused(false);
+          }}
+          aria-label="Controles del carrusel"
+        >
+          <button type="button" onClick={() => moveSlide(-1)} aria-label="Diapositiva anterior">←</button>
+          <div className="slider-dots">
+            {heroSlides.map((item, index) => (
+              <button
+                type="button"
+                className={index === activeSlide ? "slider-dot is-active" : "slider-dot"}
+                onClick={() => setActiveSlide(index)}
+                aria-label={`Mostrar diapositiva ${index + 1}: ${item.title}`}
+                aria-current={index === activeSlide ? "true" : undefined}
+                key={item.image}
+              >
+                <span>{String(index + 1).padStart(2, "0")}</span><i />
+              </button>
+            ))}
+          </div>
+          <button type="button" onClick={() => moveSlide(1)} aria-label="Diapositiva siguiente">→</button>
+        </div>
+        <div className="hero-index" aria-hidden="true">BMD / {String(activeSlide + 1).padStart(2, "0")}</div>
       </section>
 
       <section className="impact section-light">
