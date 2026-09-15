@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Manrope } from "next/font/google";
-import { headers } from "next/headers";
 import "./globals.css";
 
 const sans = Manrope({
@@ -14,36 +13,27 @@ const serif = Cormorant_Garamond({
   weight: ["400", "500", "600"],
 });
 
-export async function generateMetadata(): Promise<Metadata> {
-  const requestHeaders = await headers();
-  const host = requestHeaders.get("x-forwarded-host") || requestHeaders.get("host") || "localhost:3000";
-  const protocol = requestHeaders.get("x-forwarded-proto") || (host.startsWith("localhost") ? "http" : "https");
-  const origin = `${protocol}://${host}`;
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://broadmind-decision.pages.dev";
 
-  return {
-    metadataBase: new URL(origin),
-    title: "BroadMind Decision | Neurociencia para decisiones ejecutivas",
-    description: "Acompañamiento neuro-estratégico para CEOs y altos directivos que enfrentan decisiones complejas.",
-    icons: {
-      icon: "/favicon.png",
-      shortcut: "/favicon.png",
-      apple: "/favicon.png",
-    },
-    openGraph: {
-      title: "BroadMind Decision",
-      description: "La ciencia de decidir. La claridad de liderar.",
-      type: "website",
-      locale: "es_ES",
-      images: [{ url: `${origin}/og.png`, width: 1200, height: 630, alt: "BroadMind Decision — La ciencia de decidir" }],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: "BroadMind Decision",
-      description: "La ciencia de decidir. La claridad de liderar.",
-      images: [`${origin}/og.png`],
-    },
-  };
-}
+export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
+  title: "BroadMind Decision | Neurociencia para decisiones ejecutivas",
+  description: "Programas ejecutivos de neurociencia aplicada, neuroliderazgo y neuromanagement para CEOs y equipos de alta dirección.",
+  icons: { icon: "/favicon.png", shortcut: "/favicon.png", apple: "/favicon.png" },
+  openGraph: {
+    title: "BroadMind Decision",
+    description: "Tu cerebro es tu ventaja competitiva. Lidera desde el cerebro y decide con propósito.",
+    type: "website",
+    locale: "es_ES",
+    images: [{ url: `${siteUrl}/og.png`, width: 1200, height: 630, alt: "BroadMind Decision - neurociencia aplicada a decisiones ejecutivas" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "BroadMind Decision",
+    description: "Tu cerebro es tu ventaja competitiva. Lidera desde el cerebro y decide con propósito.",
+    images: [`${siteUrl}/og.png`],
+  },
+};
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
