@@ -300,10 +300,10 @@ p { line-height: 1.72; }
 .progress-track { height: 4px; margin-top: 12px; overflow: hidden; background: rgba(10,23,48,.1); }
 .progress-track i { display: block; height: 100%; background: var(--gold); transition: width 240ms ease; }
 .question-card { margin: 0 0 22px; padding: 32px; border: 1px solid var(--line); background: white; }
-.question-card legend { width: 100%; padding: 0; font-family: var(--font-serif), Georgia, serif; font-size: 27px; font-weight: 600; line-height: 1.22; }
+.question-card legend { float: left; width: 100%; margin: 0 0 24px; padding: 0; font-family: var(--font-serif), Georgia, serif; font-size: 27px; font-weight: 600; line-height: 1.22; }
 .question-card legend > span { margin-right: 14px; color: var(--gold); }
 .question-card legend > small { display: block; margin: 0 0 12px 48px; color: var(--teal); font-family: var(--font-sans), Arial, sans-serif; font-size: 10px; font-weight: 850; letter-spacing: .11em; text-transform: uppercase; }
-.answer-list { display: grid; margin-top: 24px; gap: 10px; }
+.answer-list { display: grid; clear: both; gap: 10px; }
 .answer { display: grid; min-height: 58px; padding: 10px 14px; border: 1px solid var(--line); cursor: pointer; grid-template-columns: 24px 34px 1fr; align-items: center; color: var(--muted); font-size: 14px; transition: border 150ms ease, background 150ms ease; }
 .answer:hover { border-color: var(--gold); }
 .answer.selected { border-color: var(--gold); background: rgba(201,162,39,.08); color: var(--ink); }
