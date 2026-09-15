@@ -80,3 +80,11 @@ test("downloadable guide is a valid multi-page PDF artifact", async () => {
   assert.equal(pdf.subarray(0, 5).toString(), "%PDF-");
   assert.ok(pdf.length > 20_000);
 });
+
+test("production uses the same stable typography as local", async () => {
+  const html = await (await render("/neurociencia")).text();
+  const css = await readFile(new URL("../app/globals.css", import.meta.url), "utf8");
+  assert.doesNotMatch(html, /\/Users\//);
+  assert.match(css, /--font-sans: Arial, Helvetica, sans-serif/);
+  assert.match(css, /--font-serif: "Times New Roman", Times, serif/);
+});
