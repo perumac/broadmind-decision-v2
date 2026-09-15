@@ -177,6 +177,7 @@ p { line-height: 1.72; }
 .hero-facts span { padding: 10px 14px; border: 1px solid rgba(255,255,255,.22); color: rgba(255,255,255,.82); font-size: 12px; font-weight: 750; }
 
 .story-grid { display: grid; grid-template-columns: 1fr; gap: 54px; align-items: start; }
+.about-story-heading .eyebrow { margin: 24px 0 0; }
 .story-copy { display: grid; grid-template-columns: repeat(2, 1fr); gap: 50px; }
 .story-copy p { margin: 0; color: var(--muted); font-size: 17px; }
 .mission-section { padding: 0; background: white; }
