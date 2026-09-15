@@ -80,17 +80,3 @@ test("downloadable guide is a valid multi-page PDF artifact", async () => {
   assert.equal(pdf.subarray(0, 5).toString(), "%PDF-");
   assert.ok(pdf.length > 20_000);
 });
-
-test("brand fonts are self-hosted for consistent production rendering", async () => {
-  for (const path of [
-    "../public/fonts/manrope-latin.woff2",
-    "../public/fonts/cormorant-garamond-latin.woff2",
-    "../public/fonts/cormorant-garamond-italic-latin.woff2",
-  ]) {
-    const font = await readFile(new URL(path, import.meta.url));
-    assert.equal(font.subarray(0, 4).toString(), "wOF2");
-  }
-
-  const html = await (await render("/neurociencia")).text();
-  assert.doesNotMatch(html, /\/Users\//);
-});

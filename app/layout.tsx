@@ -1,5 +1,17 @@
 import type { Metadata } from "next";
+import { Cormorant_Garamond, Manrope } from "next/font/google";
 import "./globals.css";
+
+const sans = Manrope({
+  variable: "--font-sans",
+  subsets: ["latin"],
+});
+
+const serif = Cormorant_Garamond({
+  variable: "--font-serif",
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+});
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://broadmind-decision.pages.dev";
 
@@ -26,7 +38,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="es">
-      <body>{children}</body>
+      <body className={`${sans.variable} ${serif.variable}`}>{children}</body>
     </html>
   );
 }
