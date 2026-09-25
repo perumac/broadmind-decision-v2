@@ -465,7 +465,8 @@ p { line-height: 1.72; }
   .mechanism-card:nth-child(even) .mechanism-visual, .mechanism-card:nth-child(even) .mechanism-content { grid-column: 1; }
   .mechanism-card:nth-child(even) .mechanism-visual { grid-row: 1; }
   .mechanism-card:nth-child(even) .mechanism-content { grid-row: 2; }
-  .mechanism-visual { min-height: 520px; }
+  .mechanism-visual { min-height: 0; aspect-ratio: 4 / 3; }
+  .mechanism-visual img { object-position: center 34%; }
   .mechanism-content { padding: 42px 38px; }
   .mechanism-diagnostic-cta { padding: 42px 38px; grid-template-columns: 1fr; gap: 32px; }
   .mechanism-diagnostic-cta .button { min-width: 0; justify-self: start; }
@@ -541,7 +542,7 @@ p { line-height: 1.72; }
   .team-card { grid-template-columns: 1fr; }
   .team-photo { min-height: 480px; }
   .mechanism-list { margin-top: 52px; }
-  .mechanism-visual { min-height: 360px; }
+  .mechanism-visual { min-height: 0; }
   .mechanism-content { padding: 32px 22px; }
   .mechanism-content h2 { font-size: 36px; }
   .mechanism-description p { font-size: 15px; text-align: left; }

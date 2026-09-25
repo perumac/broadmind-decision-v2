@@ -16,8 +16,8 @@ export const neuroscienceMechanisms = [
   {
     number: "01",
     title: "Los sesgos cognitivos distorsionan tu juicio antes de que lo notes",
-    image: "/images/mechanism-cognitive-bias-v2.jpg",
-    imageAlt: "Modelo anatómico del cerebro observado parcialmente a través de un prisma que distorsiona la percepción",
+    image: "/images/mechanism-bias-evidence-v2b.jpg",
+    imageAlt: "Directivo comparando informes contradictorios a través de una superficie de vidrio que altera sutilmente la percepción",
     paragraphs: [
       "Una parte importante de las decisiones ejecutivas se apoya en atajos mentales automáticos que el cerebro utiliza para reducir la carga cognitiva, gasto de energía, e introducir sesgos en el proceso de decisión. El problema es que en entornos de alta complejidad, esos atajos fallan — y lo hacen de forma sistemática y predecible.",
       "El sesgo de confirmación hace que busques datos que validen lo que ya crees. El efecto de anclaje fija tu juicio en la primera cifra que recibes. El exceso de confianza — amplificado por dopamina tras victorias pasadas — te lleva a subestimar el riesgo real. Ninguno de estos mecanismos es visible en el momento en que operan. Todos tienen un costo medible en las decisiones de alta dirección.",
@@ -27,8 +27,8 @@ export const neuroscienceMechanisms = [
   {
     number: "02",
     title: "El estrés desconecta tu cerebro estratégico en el momento que más lo necesitas",
-    image: "/images/mechanism-stress-disconnect-v2.jpg",
-    imageAlt: "Modelo anatómico cerebral dividido entre una zona iluminada y otra en sombra",
+    image: "/images/mechanism-stress-pressure-v2b.jpg",
+    imageAlt: "Directivo bajo presión revisando documentos urgentes al final de una jornada ejecutiva",
     paragraphs: [
       "La corteza prefrontal — la zona del cerebro responsable del pensamiento estratégico, la planificación a largo plazo y el control de impulsos, la toma de decisiones — es la primera en verse comprometida bajo estrés sostenido. El cortisol, hormona del estrés, interfiere directamente con su funcionamiento.",
       "Lo que ocurre en la práctica: el directivo bajo presión extrema no decide peor porque tenga menos información. Decide peor porque su cerebro ha cedido el control a un sistema más antiguo — el sistema de alarma — diseñado para responder a amenazas inmediatas, no para gestionar la complejidad estratégica de una organización. El resultado son decisiones más reactivas, más cortoplacistas y más sesgadas hacia la evitación que hacia la oportunidad.",
@@ -38,8 +38,8 @@ export const neuroscienceMechanisms = [
   {
     number: "03",
     title: "Las emociones no son el enemigo de la razón: son su combustible",
-    image: "/images/mechanism-emotion-reason-v2.jpg",
-    imageAlt: "Modelos anatómicos de cerebro y corazón conectados por un hilo fino",
+    image: "/images/mechanism-emotion-dialogue-v2b.jpg",
+    imageAlt: "Dos directivos integrando datos y escucha empática durante una conversación difícil",
     paragraphs: [
       "Existe un mito extendido en la alta dirección: que las mejores decisiones son las más racionales — las que eliminan la emoción de la ecuación. La neurociencia lo refuta con evidencia clara. El neurólogo Antonio Damasio demostró que pacientes con daño en la corteza prefrontal ventromedial — quienes perdieron la capacidad de procesar señales emocionales — tomaban decisiones sistemáticamente peores, a pesar de mantener intacta su inteligencia analítica.",
       "El sistema límbico, sede de las emociones, no interfiere con el razonamiento: lo informa. Los líderes que aprenden a leer sus señales emocionales como datos — en lugar de suprimirlas o dejarse dominar por ellas — toman decisiones más rápidas, más contextualizadas y con mayor inteligencia relacional hacia sus equipos.",
@@ -49,8 +49,8 @@ export const neuroscienceMechanisms = [
   {
     number: "04",
     title: "El cerebro puede cambiar. Tu liderazgo también.",
-    image: "/images/mechanism-neuroplasticity-v2.jpg",
-    imageAlt: "Modelo anatómico cerebral acompañado por una rama con nuevos brotes",
+    image: "/images/mechanism-neuroplasticity-learning-v2b.jpg",
+    imageAlt: "Líder revisando y mejorando un mapa de decisiones con retroalimentación de un colega",
     paragraphs: [
       "La neuroplasticidad — la capacidad del cerebro adulto de reorganizar sus conexiones en respuesta al aprendizaje y la experiencia — es la base científica de todo lo que hace BroadMind Decision. No se trata de motivación ni de actitud: se trata de ciencia del cerebro detrás de las decisiones.",
       "Con la formación y práctica adecuadas, es posible fortalecer los circuitos de autorregulación socioemocional, ampliar la capacidad de tomar perspectiva bajo presión, reducir la influencia de los sesgos más activos, potenciar a los equipos y desarrollar lo que la neurociencia llama flexibilidad cognitiva — la habilidad de cambiar de marco mental con agilidad cuando el entorno lo exige. Estos cambios no son teóricos: son medibles, observables y sostenibles en el tiempo.",
