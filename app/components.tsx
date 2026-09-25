@@ -18,7 +18,7 @@ export const navItems = [
 
 const heroSlides = [
   {
-    image: "/images/hero-brain.webp",
+    image: "/images/hero-brain-v2.jpg",
     eyebrow: "Neurociencia aplicada a la alta dirección",
     title: "Tu cerebro es tu ventaja competitiva.",
     accent: "Entrénalo para decidir.",
@@ -27,7 +27,7 @@ const heroSlides = [
     href: "/diagnostico",
   },
   {
-    image: "/images/hero-decision-cost.webp",
+    image: "/images/hero-decision-cost-v2.jpg",
     eyebrow: "El costo invisible de esperar",
     title: "La indecisión tiene un costo.",
     accent: "Hazlo visible.",
@@ -36,7 +36,7 @@ const heroSlides = [
     href: "/diagnostico",
   },
   {
-    image: "/images/hero-foresight.webp",
+    image: "/images/hero-foresight-v2.jpg",
     eyebrow: "Neuroliderazgo estratégico",
     title: "Decisiones más inteligentes.",
     accent: "Liderazgo más humano.",
@@ -45,7 +45,7 @@ const heroSlides = [
     href: "/programas",
   },
   {
-    image: "/images/hero-direction.webp",
+    image: "/images/hero-direction-v2.jpg",
     eyebrow: "Dirección antes que velocidad",
     title: "No elimines la incertidumbre.",
     accent: "Construye claridad.",
