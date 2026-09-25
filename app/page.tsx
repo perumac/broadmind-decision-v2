@@ -3,7 +3,7 @@ import { decisionInsights, programs } from "./content";
 
 const pillars = [
   { number: "01", title: "Neurociencia", image: "/images/pillar-neuroscience-v2.jpg", imageAlt: "Directivo examinando evidencia antes de tomar una decisión de alta responsabilidad", copy: "Planificación, control de impulsos, flexibilidad cognitiva, toma de perspectiva y regulación emocional aplicadas a decisiones de alta responsabilidad." },
-  { number: "02", title: "Neuromanagement", image: "/images/pillar-neuromanagement-v2.jpg", imageAlt: "Equipo directivo organizando prioridades y rutas de ejecución sobre una mesa estratégica", copy: "Herramientas para optimizar cómo el equipo directivo procesa información, prioriza, conversa y ejecuta bajo presión." },
+  { number: "02", title: "Neuromanagement", image: "/images/pillar-neuromanagement-v2b.jpg", imageAlt: "Equipo directivo evaluando prioridades, tiempos y rutas de ejecución frente a un tablero estratégico", copy: "Herramientas para optimizar cómo el equipo directivo procesa información, prioriza, conversa y ejecuta bajo presión." },
   { number: "03", title: "Neuroliderazgo", image: "/images/pillar-neuroliderazgo-v2.jpg", imageAlt: "Líder ejecutivo facilitando una conversación estratégica con su equipo", copy: "Integración de neurociencia cognitiva y emocional al estilo de liderazgo, la influencia, el riesgo y la visión estratégica." },
 ];
 

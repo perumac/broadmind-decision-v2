@@ -284,7 +284,7 @@ export function HeroSlider() {
     <section className="hero" aria-labelledby="hero-title">
       <div className="hero-slides" aria-hidden="true">
         {heroSlides.map((item, index) => (
-          <div className={index === activeSlide ? "hero-slide is-active" : "hero-slide"} key={item.image}>
+          <div className={`hero-slide hero-slide-${index + 1}${index === activeSlide ? " is-active" : ""}`} key={item.image}>
             <img src={item.image} alt="" />
           </div>
         ))}
