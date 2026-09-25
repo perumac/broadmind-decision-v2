@@ -38,8 +38,8 @@ export const neuroscienceMechanisms = [
   {
     number: "03",
     title: "Las emociones no son el enemigo de la razón: son su combustible",
-    image: "/images/mechanism-emotion-dialogue-v2b.jpg",
-    imageAlt: "Dos directivos integrando datos y escucha empática durante una conversación difícil",
+    image: "/images/mechanism-emotion-family-v2c.jpg",
+    imageAlt: "Director compartiendo un momento cercano con su hija de nueve años mientras ella le muestra un dibujo en la oficina",
     paragraphs: [
       "Existe un mito extendido en la alta dirección: que las mejores decisiones son las más racionales — las que eliminan la emoción de la ecuación. La neurociencia lo refuta con evidencia clara. El neurólogo Antonio Damasio demostró que pacientes con daño en la corteza prefrontal ventromedial — quienes perdieron la capacidad de procesar señales emocionales — tomaban decisiones sistemáticamente peores, a pesar de mantener intacta su inteligencia analítica.",
       "El sistema límbico, sede de las emociones, no interfiere con el razonamiento: lo informa. Los líderes que aprenden a leer sus señales emocionales como datos — en lugar de suprimirlas o dejarse dominar por ellas — toman decisiones más rápidas, más contextualizadas y con mayor inteligencia relacional hacia sus equipos.",
